@@ -3,8 +3,9 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900');
 @import url('font-awesome.min.css');
+
 
 /*
 	Aerial by HTML5 UP
@@ -21,12 +22,12 @@
       1680px,
     ),
     normal: (
-      737px,
+      781px,
       1280px,
     ),
     mobile: (
       481px,
-      736px,
+      780px,
     ),
     mobilep: (
       null,
@@ -38,15 +39,6 @@
 // Mixins.
 
 @mixin bg($width) {
-  @include keyframes('bg') {
-    0% {
-      @include vendor('transform', 'translate3d(0,0,0)');
-    }
-    100% {
-      @include vendor('transform', 'translate3d(#{$width * -1},0,0)');
-    }
-  }
-
   #bg {
     background-size: $width auto;
     width: ($width * 3);
@@ -58,6 +50,7 @@ $delay-overlay: $delay-wrapper - 0.5s;
 $delay-header: $delay-overlay + _duration(overlay) - 0.75s;
 $delay-nav-icons: $delay-header + _duration(header) - 1s;
 $delay-nav-icon: 0.25s;
+
 
 // Reset.
 // Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
@@ -313,9 +306,11 @@ a {
   background: _misc(bg);
 
   background-repeat: repeat-x;
+  background-position-x: calc(50vw - 1100px);
+  background-position-y: center;
   height: 100%;
   left: 0;
-  opacity: 1;
+  opacity: 0.9;
   position: fixed;
   top: 0;
 }
@@ -419,10 +414,42 @@ a {
     line-height: 1em;
   }
 
+  .body {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+
+    div {
+      width: 50%;
+      padding: 0px 20px;
+    }
+  }
+
   p {
-    font-size: 1.25em;
+    font-size: 2em;
     margin: 0.75em 0 0.25em 0;
-    opacity: 0.75;
+    //opacity: 0.75;
+  }
+  .title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center
+  }
+  .logo {
+    display: inline-block;
+    height: 180px;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
   }
 
   nav {
@@ -508,7 +535,7 @@ a {
   );
   bottom: 0;
   cursor: default;
-  height: 6em;
+  height: 5em;
   left: 0;
   line-height: 8em;
   position: absolute;
@@ -530,7 +557,12 @@ a {
 
   /* BG */
 
-  @include bg(_misc(bg-width));
+  #bg {
+    background-size: cover;
+    background-position-x: calc(50vw - 900px);
+  }
+
+  @include bg(_misc(bg-width) * 1.2);
 }
 
 /* Normal */
@@ -546,8 +578,24 @@ a {
   }
 
   /* BG */
+  #bg{
+    background-position-x: calc(50vw - 700px);
+  }
 
-  @include bg(_misc(bg-width) * 0.5);
+  #header {
+    width: 90%;
+    .body {
+      margin-top: 30px;
+      h1 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  //@include bg(_misc(bg-width) * 0.5);
+  @include bg(_misc(bg-width));
 }
 
 /* Mobile */
@@ -568,17 +616,37 @@ a {
 
   /* BG */
 
-  @include bg(_misc(bg-width) * 0.2);
+  #bg{
+    background-position-x: calc(50vw - 700px);
+  }
+  @include bg(_misc(bg-width));
+  //@include bg(_misc(bg-width) * 0.2);
 
   /* Header */
 
   #header {
+    .body {
+      width: auto;
+    }
     h1 {
-      font-size: 2.5em;
+      font-size: 3.0em;
     }
 
     p {
-      font-size: 1em;
+      font-size: 1.7em;
+    }
+
+    .title{
+      display: block;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center
+    }
+    .logo {
+      display: inline-block;
+      height: 140px;
+      margin: 0 0.5em 0 0;
+      vertical-align: middle;
     }
 
     nav {
@@ -602,7 +670,10 @@ a {
 @include breakpoint('<=mobilep') {
   /* BG */
 
-  @include bg(_misc(bg-width) * 0.275);
+  #bg{
+    background-position-x: calc(50vw - 700px);
+  }
+  @include bg(_misc(bg-width));
 
   /* Header */
 

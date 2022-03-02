@@ -11,17 +11,13 @@ module.exports = {
   // social
 
   authorName: 'StackingUp',
-  authorHeading: 'Busca, Alquila, Guarda',
+  authorHeading: 'Busca, alquila, guarda',
+  authorAvatar: 'src/assets/img/website-icon.png',
   authorSocialLinks: [
     {
       icon: 'fa-github',
       name: 'Github',
-      url: 'https://github.com/ISPP-2022',
-    },
-    {
-      icon: 'fa-envelope-o',
-      name: 'Email',
-      url: 'mailto:stackingup13@gmail.com',
+      url: 'https://github.com/Stacking-Up',
     },
   ],
 };

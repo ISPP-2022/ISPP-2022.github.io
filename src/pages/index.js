@@ -9,7 +9,6 @@ const IndexPage = () => (
   <Layout>
     <>
       <div id="bg" />
-      <div id="overlay" />
       <div id="main">
         <Header />
         <Footer />
