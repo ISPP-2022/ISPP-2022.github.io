@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkstacking_up=self.webpackChunkstacking_up||[]).push([[883],{429:function(e,t,n){n.r(t);var a=n(7294),u=n(8678);t.default=function(){return a.createElement(u.Z,{darkText:!0},a.createElement("h1",null,"NOT FOUND"),a.createElement("p",null,"Not a valid URL"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-c8fa2e273cd7242d2e33.js.map

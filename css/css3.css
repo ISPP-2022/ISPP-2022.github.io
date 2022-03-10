@@ -1,0 +1,204 @@
+.hgAhtA .mockup1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 0px;
+  top: 0px;
+  background: url(../images/icon.png), white;
+  background-size: contain;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(21.8507px);
+  border-radius: 16px;
+}
+
+@media screen and (max-width:1000px) {
+	.mockup1, .mockup2, .mockup3, .mockup4, .mockup5 {
+    display:none ;
+  }
+}
+
+.hgAhtA .mockup2 {
+  position: absolute;
+  width: 183px;
+  height: 120px;
+  left: 214px;
+  top: 0px;
+  background: url(../images/mern.jpg), linear-gradient(184.82deg, rgb(41, 166, 158) 3.89%, rgb(117, 209, 204) 96.11%);
+  background-size: contain;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgb(0 0 0 / 10%) 0px 8.19119px 16.3824px, rgb(0 0 0 / 15%) 0px 16.3824px 32.7648px;
+  backdrop-filter: blur(21.8432px);
+  border-radius: 16px;
+}
+
+.hgAhtA .mockup3 {
+  position: absolute;
+  width: 701px;
+  height: 380px;
+  left: 37px;
+  top: 60px;
+  background: url(../images/mockup3.png), rgba(23, 12, 61, 0.5);
+  background-size: cover;
+  box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
+  backdrop-filter: blur(27.3844px);
+  border-radius: 8px;
+}
+
+.hgAhtA .mockup4 {
+  position: absolute;
+  width: 399px;
+  height: 274px;
+  left: 78px;
+  top: 228px;
+  background: url(../images/swagger.png), rgba(39, 20, 62, 0.3);
+  background-size: cover;
+  box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+}
+
+.hgAhtA .mockup5 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 600px;
+  top: 400px;
+  background: url(../images/container.svg), rgb(255, 255, 255,0);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.hgAhtA div {
+  transform: rotateY(-20deg) rotateX(20deg);
+  transform-origin: left bottom;
+}
+
+.hgAhtA * {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+.hgAhtA:hover div.mockup1 {
+  transition-delay: 0.1s;
+  transform: translate(-30px, -30px);
+}
+
+.hgAhtA:hover div {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.hgAhtA:hover div.mockup2 {
+  transition-delay: 0.2s;
+  transform: translate(0px, -30px);
+}
+
+.hgAhtA:hover div {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.hgAhtA:hover div:hover {
+  filter: brightness(110%) saturate(110%);
+}
+
+.hgAhtA:hover div.mockup3 {
+  transition-delay: 0s;
+}
+
+.hgAhtA:hover div {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.hgAhtA:hover div.mockup4 {
+  transition-delay: 0.1s;
+  transform: translate(-120px, 30px);
+}
+
+.hgAhtA:hover div {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.hgAhtA:hover div.mockup5 {
+  transition-delay: 0.2s;
+  transform: translate(5px, 8px);
+}
+
+.hgAhtA:hover div {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.countdown {
+  display: inline-flex; 
+  font-size: 34px; 
+  font-weight: bold; 
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(15, 14, 71, 0.25);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+}
+
+.email-input {
+  height: 50px; 
+  width: 40%; 
+  border-radius: 20px; 
+  outline:rgba(74, 166, 192, 0.75) none 3px;
+  font-family: "futura_de";
+  font-size: 20px;
+  padding: 10px;
+  color: #4aa7c0;
+  border: 1px solid #4aa7c0;
+  margin-right: 10px;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.btn-news {
+  transition: all 0.1s ease-in-out;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: 0px solid #4aa7c0;
+  background-color: #9be4f8;
+  color: white;
+}
+
+.btn-news:hover {
+  
+  background-color: #4aa7c0;
+}
+
+.avatar {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "futura_de";
+  text-align: center;
+  line-height: 50px;
+  border:5px solid #ad5ea0;
+}
+
+.container .heading , .wrapper .heading, .container .small-title{
+  color: #f0f0f0;
+}
+
+.container .small-title span{
+  color: #f0f0f0;
+}
+
+.heading-num {
+  color:#9be4f8
+}
+
+.heading-num::after {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width:800px) {
+	.cosas {
+	display: none;}
+}
